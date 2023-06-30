@@ -1,12 +1,22 @@
 {
   "name": "scalable-next-js-project-template",
+  "description": "A template for creating a production-ready fullstack Next.js application",
+  "license": "MIT",
+  "homepage": "",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.8.0",
+    "yarn": "please-use-npm"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@types/node": "20.3.2",
@@ -15,8 +25,16 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "next": "13.4.7",
+    "next-auth": "^4.22.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "recoil": "^0.7.7",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.0"
   }
 }
