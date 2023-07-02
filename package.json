@@ -3,20 +3,32 @@
   "description": "A template for creating a production-ready fullstack Next.js application",
   "license": "MIT",
   "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yedidya10/scalable-next-js-project-template"
+  },
+  "author": {
+    "name": "Aberjel Yedidya",
+    "url": "https://github.com/Yedidya10"
+  },
   "version": "0.1.0",
   "private": true,
   "engines": {
     "npm": ">=8.0.0",
     "node": ">=16.8.0",
-    "yarn": "please-use-npm"
+    "yarn": "please-use-npm",
+    "next": ">=13.4.0"
   },
   "scripts": {
     "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "type-check": "npx tsc --noEmit",
     "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@types/node": "20.3.2",
@@ -26,6 +38,7 @@
     "eslint-config-next": "13.4.7",
     "next": "13.4.7",
     "next-auth": "^4.22.1",
+    "next-translate": "^2.4.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "recoil": "^0.7.7",
@@ -34,7 +47,20 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.6",
     "@commitlint/config-conventional": "^17.6.6",
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/nextjs": "^7.0.24",
+    "@storybook/react": "^7.0.24",
+    "@storybook/testing-library": "^0.0.14-next.2",
     "cross-env": "^7.0.3",
-    "husky": "^8.0.0"
+    "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^8.0.0",
+    "next-translate-plugin": "^2.4.4",
+    "storybook": "^7.0.24"
+  },
+  "resolutions": {
+    "webpack": "^5"
   }
 }
