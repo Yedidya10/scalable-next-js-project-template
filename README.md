@@ -1,36 +1,36 @@
 # Scalable Full Stack Next.js Application Template
 
-## Summary
+#### Summary
 This repository template provides a production-ready foundation for creating a full stack Next.js application. It includes a comprehensive set of technologies and tools to help you develop and deploy your application efficiently.
 
-### Technologies Included
-#### Next.js (TypeScript version)
+## Technologies Included
+### Next.js (TypeScript version)
 Next.js is a popular React framework that allows you to build server-rendered React applications. This template utilizes the most up-to-date stable version of Next.js with TypeScript, which provides static typing and improved development experience for catching errors and refactoring code.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-#### Storybook
+### Storybook
 Storybook is a powerful tool for developing UI components in isolation. It enables you to build and test React components independently, providing a visual representation of your components. This template incorporates the latest stable version of Storybook, allowing you to iterate and maintain your UI components with ease.
 
-#### MongoDB
+### MongoDB
 MongoDB is a scalable and flexible NoSQL database that seamlessly integrates with Next.js applications. This template includes support for the latest stable version of MongoDB, empowering you to store and retrieve data, perform complex queries, and leverage its document-based model for efficient data management.
 
-#### NextAuth.js
+### NextAuth.js
 NextAuth.js is a popular authentication library for Next.js applications. It simplifies the implementation of authentication mechanisms, including various providers such as Google, Facebook, and GitHub. This template integrates the most up-to-date stable version of NextAuth.js, allowing you to easily add authentication to your application.
 
-#### Next-Translation
+### Next-Translation
 Next-Translation is a localization and internationalization library for Next.js applications. It provides a seamless way to add multilingual support to your application, enabling you to easily translate your content into different languages. This template includes the latest stable version of Next-Translation, facilitating the development of localized applications.
 
-#### Recoil (State Management)
+### Recoil (State Management)
 Recoil is a state management library for managing application state in React applications. It provides an intuitive API and a set of powerful features for managing complex state requirements. This template incorporates the most up-to-date stable version of Recoil, enabling you to efficiently handle and synchronize state across your Next.js components.
 
-#### React Motion
+### React Motion
 React Motion is a library that allows you to create smooth and interactive animations in your React applications. It offers a simple API for defining and controlling animations, enhancing the user experience. This template utilizes the latest stable version of React Motion, enabling you to easily incorporate fluid animations into your Next.js application.
 
-#### React Icons
+### React Icons
 React Icons is a library that offers a wide range of popular icon packs as React components. It simplifies the process of including icons in your application by providing a vast collection of pre-built icons. This template utilizes the most recent stable version of React Icons, allowing you to easily include high-quality icons in your Next.js application.
 
-#### Husky
+### Husky
 Husky is a Git hook manager that automates tasks before or after specific Git events. In this template, Husky is used to enforce code quality and standards by running linting and formatting checks before committing your code. It ensures a consistent codebase and prevents committing code that doesn't meet project guidelines. This template uses the most recent stable version of Husky.
 
 ## Getting Started
