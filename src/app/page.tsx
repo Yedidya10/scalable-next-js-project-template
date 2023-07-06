@@ -3,8 +3,6 @@ import styles from './page.module.scss'
 
 import useTranslation from 'next-translate/useTranslation'
 
-import BaseTemplate from '@/components/templates/base/BaseTemplate'
-
 export default function Home() {
   const { t } = useTranslation('home')
   const example = t('variable-example', { count: 42 })
