@@ -30,6 +30,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ### React Icons
 [React-Icons](https://github.com/react-icons/react-icons) is a library that offers a wide range of popular icon packs as React components. It simplifies the process of including icons in your application by providing a vast collection of pre-built icons. This template utilizes the most recent stable version of React Icons, allowing you to easily include high-quality icons in your Next.js application.
 
+### Prettier
+[Prettier](https://github.com/prettier/prettier) is a code formatting tool that helps maintain consistent and visually appealing code styles across your project. It automatically formats your code based on a set of predefined rules, ensuring that the codebase remains neat and readable.
+
 ### Husky
 [Husky](https://github.com/typicode/husky) is a Git hook manager that automates tasks before or after specific Git events. In this template, Husky is used to enforce code quality and standards by running linting and formatting checks before committing your code. It ensures a consistent codebase and prevents committing code that doesn't meet project guidelines. This template uses the most recent stable version of Husky.
 
@@ -61,7 +64,21 @@ npm install
 npm run prepare
 ```
 
-3. Create an environment file (.env) in the root of your project and populate it with the necessary configuration values, such as NODE_ENV, NEXT_AUTH, and DATABASE_URL. Make sure to keep this file secure and not commit it to version control.
+3. Create an environment file (.env) in the root of your project and populate it with the necessary configuration values:
+
+```bash
+NODE_ENV=development
+NEXTAUTH_URL=http://127.0.0.1:3000
+JWT_SECRET=<secret_token>
+
+MONGODB_URI=mongodb+srv://<username>:<password>@<cluster.code>.mongodb.net/
+
+GOOGLE_CLIENT_ID=<GOOGLE_CLIENT_ID>
+GOOGLE_CLIENT_SECRET=<GOOGLE_CLIENT_SECRET>
+FACEBOOK_CLIENT_ID=<FACEBOOK_CLIENT_ID>
+FACEBOOK_CLIENT_SECRET=<FACEBOOK_CLIENT_SECRET>
+```
+Make sure to keep this file secure and not commit it to version control.
 
 4. Start the development server by running the following command:
 ```bash
