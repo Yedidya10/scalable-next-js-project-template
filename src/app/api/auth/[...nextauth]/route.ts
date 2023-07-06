@@ -1,4 +1,7 @@
 import NextAuth from 'next-auth'
+import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import clientPromise from "@/lib/mongodb"
+
 import CredentialsProvider from 'next-auth/providers/credentials'
 import FacebookProvider from 'next-auth/providers/facebook'
 import GoogleProvider from 'next-auth/providers/google'
@@ -69,7 +72,7 @@ const handler = NextAuth({
     // signOut: '/auth/signout',
     // error: '/auth/error', // Error code passed in query string as ?error=
     // verifyRequest: '/auth/verify-request', // (used for check email message)
-    newUser: '/auth/register' // New users will be directed here on first sign in (leave the property out if not of interest)
+    // newUser: '/auth/register' // New users will be directed here on first sign in (leave the property out if not of interest)
   },
   callbacks: {
     async jwt({ token, account }) {
