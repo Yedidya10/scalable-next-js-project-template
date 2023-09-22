@@ -82,16 +82,20 @@ npm run prepare
 3. Create an environment file (.env) in the root of your project and populate it with the necessary configuration values:
 
 ```bash
+# ENV
 NODE_ENV=development
+
+# NEXTAUTH
 NEXTAUTH_URL=http://127.0.0.1:3000
 JWT_SECRET=<secret_token>
 
+# MONGODB
 MONGODB_URI=mongodb+srv://<username>:<password>@<cluster.code>.mongodb.net/
+MONGODB_URI_LOCALE=mongodb://localhost:27017/<database_name>
 
+# GOOGLE AUTH
 GOOGLE_CLIENT_ID=<GOOGLE_CLIENT_ID>
 GOOGLE_CLIENT_SECRET=<GOOGLE_CLIENT_SECRET>
-FACEBOOK_CLIENT_ID=<FACEBOOK_CLIENT_ID>
-FACEBOOK_CLIENT_SECRET=<FACEBOOK_CLIENT_SECRET>
 ```
 Make sure to keep this file secure and not commit it to version control.
 
