@@ -41,12 +41,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 To get started with this template, you have two options:
 
 ### Option 1: Create a Repo on GitHub
-1. Go to the GitHub repository creation page.
-2. Click on the "Add Repo" button.
-3. In the repository creation form, click on "Select Template".
-4. Search for and select this template.
-5. Provide a name and description for your repository.
-6. Click on "Create repository" to create a new repository based on this template.
+1. Click on the `Use this template` green button at the top page.
+2. Click on `Create a new repository`.
 
 ### Option 2: Download the Repo
 1. Download this repository to your local machine by clicking on the "Download" button or using the Git clone command.
