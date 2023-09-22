@@ -1,15 +1,9 @@
 import Image from 'next/image'
 import styles from './page.module.scss'
 
-import useTranslation from 'next-translate/useTranslation'
-
 export default function Home() {
-  const { t } = useTranslation('home')
-  const example = t('variable-example', { count: 42 })
-
   return (
     <main className={styles.main}>
-      <div>{example}</div>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;

@@ -8,7 +8,6 @@ import { signIn } from 'next-auth/react'
 import LoaderIcon from '../animations/loaderIcon/LoaderIcon'
 
 export interface ISignIn {
-  providersLoginText: string,
   providers: object,
   /**
    * Is this the principal call to action on the page?
@@ -34,7 +33,6 @@ export interface ISignIn {
 
 const SignIn: React.FC<ISignIn> = ({
   providers,
-  providersLoginText,
   primary = false,
   label,
   ...props
@@ -73,7 +71,8 @@ const SignIn: React.FC<ISignIn> = ({
           ) : (
             <AiFillGoogleCircle />
           )}
-              {providersLoginText} {provider.name}
+              Continue with
+              {provider.name}
             </button>
           </li>
         ))}
