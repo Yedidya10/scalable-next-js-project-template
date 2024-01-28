@@ -4,6 +4,7 @@ import { User } from '@/models/dbModels'
 import NextAuth, { AuthOptions } from 'next-auth'
 import { Adapter } from 'next-auth/adapters'
 import GoogleProvider from 'next-auth/providers/google'
+import FacebookProvider from 'next-auth/providers/facebook'
 
 // Check if the environment variables are set
 function getCredentials(providerName: string) {
@@ -28,6 +29,10 @@ export const authOptions: AuthOptions = {
       clientId: getCredentials('GOOGLE').clientId,
       clientSecret: getCredentials('GOOGLE').clientSecret,
     }),
+    // FacebookProvider({
+    //   clientId: getCredentials('FACEBOOK').clientId,
+    //   clientSecret: getCredentials('FACEBOOK').clientSecret,
+    // }),
   ],
   secret: process.env.JWT_SECRET,
   pages: {
@@ -40,9 +45,16 @@ export const authOptions: AuthOptions = {
   callbacks: {
     // The `session` callback is called when a new session is created or updated
     session: async ({ session, user }) => {
+      const userFirstName = user.name ? user.name.split(' ')[0] : ''
+      const userLastName = user.name ? user.name.split(' ')[1] : ''
       const dbUser = await User.findOneAndUpdate(
         { email: user.email },
-        { role: 'user' }, // Set the user's role to 'user'
+        {
+          lastLogin: new Date(),
+          firstName: userFirstName,
+          lastName: userLastName,
+          role: 'user',
+        }, // Set the user's role to 'user'
         { new: true } // Return the updated user
       )
       return {
