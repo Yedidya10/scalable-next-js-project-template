@@ -1,7 +1,8 @@
-import { getProviders, signIn } from 'next-auth/react'
-import styles from './page.module.scss'
+import Providers from '@/components/buttons/providers/Providers'
+import Box from '@mui/material/Box'
 import { Metadata } from 'next'
-import SignIn from '@/components/signIn/SignIn'
+import { getProviders } from 'next-auth/react'
+import { unstable_setRequestLocale } from 'next-intl/server'
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -12,30 +13,36 @@ export interface ILogin {
   providersLoginText: string
   providers: any
   Login: any
+  locale: string
 }
 
-export async function getServerSideProps({}: {}) {
-  try {
-    const providers = await getProviders()
-
-    return {
-      props: {
-        providers,
-      },
-    }
-  } catch (error) {
-    console.error('Error fetching providers:', error)
-  }
-}
-
-const Login: React.FC<ILogin> = ({
-  providers
-}) => {
+const Login: React.FC<ILogin> = async ({ locale }: ILogin) => {
+  unstable_setRequestLocale(locale)
+  const providers = await getProviders()
+  const providersLoginText = 'Continue with'
 
   return (
-    <div>
-      <SignIn providers={providers} label={''}/>
-    </div>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: 2,
+        maxWidth: '400px',
+        margin: '0 auto',
+      }}
+    >
+      {/* <SignInForm label={''} /> */}
+      {/* Once there is a domain, it will be possible to define this provider.
+      https://authjs.dev/guides/providers/email
+      https://nodemailer.com/about/#example */}
+      {/* <MagicLinkForm label={''} /> */}
+      <Providers
+        providers={providers}
+        providersLoginText={providersLoginText}
+        label={''}
+      />
+    </Box>
   )
 }
 
