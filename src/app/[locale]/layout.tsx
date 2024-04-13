@@ -9,7 +9,6 @@ import { Inter, Roboto } from 'next/font/google'
 import { headers } from 'next/headers'
 import * as React from 'react'
 import AuthProvider from '@/components/AuthProvider'
-import './globals.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 const roboto = Roboto({
