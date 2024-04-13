@@ -28,7 +28,7 @@
     "lint": "next lint",
     "type-check": "npx tsc --noEmit",
     "prettier": "prettier --write .",
-    "prepare": "husky install",
+    "prepare": "husky",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
