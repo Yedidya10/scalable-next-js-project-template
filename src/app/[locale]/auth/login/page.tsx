@@ -1,4 +1,4 @@
-import Providers from '@/components/buttons/providers/Providers'
+import Providers from '../../../../components/buttons/providers/Providers'
 import Box from '@mui/material/Box'
 import { Metadata } from 'next'
 import { getProviders } from 'next-auth/react'

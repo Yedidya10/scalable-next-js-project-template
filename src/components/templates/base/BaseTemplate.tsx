@@ -1,5 +1,3 @@
-import styles from './BaseTemplate.module.scss'
-
 export interface IBaseTemplate {
   sampleTextProp: string
   /**
@@ -30,7 +28,7 @@ const BaseTemplate: React.FC<IBaseTemplate> = ({
   sampleTextProp,
   ...props
 }) => {
-  return <div className={styles.container}>{sampleTextProp}</div>
+  return <div>{sampleTextProp}</div>
 }
 
 export default BaseTemplate

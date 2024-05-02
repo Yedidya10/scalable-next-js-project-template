@@ -1,6 +1,6 @@
 'use client'
 
-import Link from '@/components/mui/Link'
+import Link from '../../../components/mui/Link'
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined'
 import GoogleIcon from '@mui/icons-material/Google'
 import Box from '@mui/material/Box'
