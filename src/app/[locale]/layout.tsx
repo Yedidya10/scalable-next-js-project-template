@@ -1,4 +1,5 @@
-import { useLocale } from 'next-intl'
+import { getLocale
+} from 'next-intl/server';
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 // import 'rsuite/dist/rsuite.min.css'
@@ -43,7 +44,7 @@ export default async function RootLayout({
   }
 }) {
   const session = await getSession(headers().get('cookie') ?? '')
-  const locale = useLocale()
+  const locale = await getLocale()
 
   // Show a 404 error if the user requests an unknown locale
   if (params.locale !== locale) {
