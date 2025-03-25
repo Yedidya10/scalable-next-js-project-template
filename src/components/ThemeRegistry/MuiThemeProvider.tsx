@@ -1,18 +1,18 @@
 'use client'
 
-import * as React from 'react'
-import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import * as React from 'react'
 import defaultTheme from './theme'
-import { useRecoilValue } from 'recoil'
-import themeModeState from '@/recoils/themeMode/themeModeState'
 
 export default function MuiThemeProvider({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const themeMode = useRecoilValue(themeModeState)
+  // TODO: use Redux to get the theme mode
+  // const themeMode = useRecoilValue(themeModeState)
+  const themeMode = 'light'
 
   const theme = React.useMemo(
     () =>

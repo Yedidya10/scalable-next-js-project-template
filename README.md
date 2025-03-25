@@ -1,6 +1,7 @@
 # Scalable Full Stack Next.js Application Template
 
 #### Summary
+
 This repository template provides a production-ready foundation for creating a full stack Next.js application. It includes a comprehensive set of technologies and tools to help you develop and deploy your application efficiently.
 
 ## Technologies Included
@@ -11,8 +12,8 @@ This repository template provides a production-ready foundation for creating a f
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-
 ### Material-UI (v5)
+
 [Material-UI](https://github.com/mui/material-ui) is a popular React UI framework that provides a wide collection of customizable components and themes. This template incorporates the latest stable version of Material-UI, allowing you to easily build beautiful and responsive user interfaces.
 
 ### Storybook
@@ -31,9 +32,9 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 [next-intl](https://github.com/amannn/next-intl) is a library that provides internationalization support for Next.js applications. It offers a simple API for defining and managing translations, enabling you to easily localize your application. This template utilizes the latest stable version of next-intl, allowing you to easily add internationalization to your Next.js application.
 
-### Recoil (State Management)
+### Redux (State Management)
 
-[Recoil](https://github.com/facebookexperimental/Recoil) is a state management library for managing application state in React applications. It provides an intuitive API and a set of powerful features for managing complex state requirements. This template incorporates the most up-to-date stable version of Recoil, enabling you to efficiently handle and synchronize state across your Next.js components.
+[Redux](https://www.github.com/reduxjs/redux) is a state management library for managing application state in React applications. It provides an intuitive API and a set of powerful features for managing complex state requirements. This template incorporates the most up-to-date stable version of Redux, enabling you to efficiently handle and synchronize state across your Next.js components.
 
 ### React Hook Form
 
@@ -60,21 +61,25 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 To get started with this template, you have two options:
 
 ### Option 1: Create a Repo on GitHub
+
 1. Click on the `Use this template` green button at the top page.
 2. Click on `Create a new repository`.
 
 ### Option 2: Download the Repo
+
 1. Download this repository to your local machine by clicking on the "Download" button or using the Git clone command.
 2. Extract the downloaded zip file (if applicable) and navigate to the project's root directory in your terminal.
 
 After setting up the repository, follow these steps to initialize and run your Next.js application:
 
 1. Install the project dependencies by running the following command:
+
 ```bash
 npm install
 ```
 
 2. Prepare the project by running the following command:
+
 ```bash
 npm run prepare
 ```
@@ -97,16 +102,18 @@ MONGODB_URI_LOCALE=mongodb://localhost:27017/<database_name>
 GOOGLE_CLIENT_ID=<GOOGLE_CLIENT_ID>
 GOOGLE_CLIENT_SECRET=<GOOGLE_CLIENT_SECRET>
 ```
+
 Make sure to keep this file secure and not commit it to version control.
 
 4. Start the development server by running the following command:
+
 ```bash
 npm run dev
 ```
+
 This will launch your Next.js application and make it accessible at http://localhost:3000 by default.
 
 You are now ready to start developing your full stack Next.js application! Customize and expand upon the provided template to suit your project's requirements. Happy coding!
-
 
 ## Learn More
 
@@ -120,6 +127,7 @@ To learn more about Next.js, take a look at the following resources:
 ## Deployment
 
 ### Deploy on Vercel
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

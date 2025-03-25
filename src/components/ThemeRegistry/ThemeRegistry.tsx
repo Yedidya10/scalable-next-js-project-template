@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import NextAppDirEmotionCacheProvider from './EmotionCache'
-import { RecoilRoot } from 'recoil'
 import MuiThemeProvider from './MuiThemeProvider'
 
 export default function ThemeRegistry({
@@ -12,9 +11,7 @@ export default function ThemeRegistry({
 }) {
   return (
     <NextAppDirEmotionCacheProvider options={{ key: 'mui' }}>
-      <RecoilRoot>
-        <MuiThemeProvider>{children}</MuiThemeProvider>
-      </RecoilRoot>
+      <MuiThemeProvider>{children}</MuiThemeProvider>
     </NextAppDirEmotionCacheProvider>
   )
 }

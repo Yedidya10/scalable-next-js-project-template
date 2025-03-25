@@ -43,6 +43,7 @@
     "@mui/x-data-grid": "^6.20.0",
     "@mui/x-date-pickers": "^6.20.0",
     "@react-spring/web": "^9.7.3",
+    "@reduxjs/toolkit": "^2.6.1",
     "@types/node": "20.11.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
@@ -59,7 +60,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.5",
     "react-icons": "^5.2.1",
-    "recoil": "^0.7.7",
+    "react-redux": "^9.2.0",
     "stylis": "^4.3.1",
     "stylis-plugin-rtl": "^2.1.1",
     "typescript": "^5.3.3"
